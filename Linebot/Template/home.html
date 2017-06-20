@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for post in post_list %}
+        標題：<a href="{{ post.id }}">{{ post.title }}</a>
+        發布時間： <a class="post-author" href="">{{ post.publish_time |date:"Y/m/d"}}</a>
+        分類： <a class="post-category post-category-yui" href="/categories/">{{ post.category }}</a>
+        正文： <p>{{ post.content }}</p>
+    {% endfor %}
+</body>
+</html>
