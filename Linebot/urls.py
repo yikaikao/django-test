@@ -22,3 +22,11 @@ urlpatterns = [
     url(r'^here/$', here),
     
 ]
+
+
+import echobot
+
+urlpatterns = [
+    ......,
+    url(r'^echobot/', include('echobot.urls')),
+]

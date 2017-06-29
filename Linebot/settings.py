@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'echobot',
 ]
 
 MIDDLEWARE = [
@@ -119,3 +120,16 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
+
+
+# def get_env_variable(var_name):
+#     try:
+#         return os.environ[var_name]
+#     except KeyError:
+#         error_msg = 'Set the {} environment variable'.format(var_name)
+#         raise ImproperlyConfigured(error_msg)
+        
+
+LINE_CHANNEL_ACCESS_TOKEN = '7HIhyVs4U89xP1wMmZ86Ke+dZ6UZd5mxrGSGMRYBQnIyf4JvVfFgg3EcNojU/RKh6CISTzJBFAXNAdkHSQfNW10+C2DUG0m6pSXo2grTXFTyaoPpnzdegbVDitwLUwasQyTyBvWo3WqkVUoy5deErwdB04t89/1O/w1cDnyilFU='
+LINE_CHANNEL_SECRET = 'b8482bb44634731b870f8693c1a7b109'
