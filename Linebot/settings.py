@@ -119,7 +119,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-import os
-if os.getenv('DATABASE_URL') is not None:
-    import dj_database_url
-    DATABASES['default'] = dj_database_url.config()
