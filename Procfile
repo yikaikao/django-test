@@ -1,1 +1,1 @@
-web: gunicorn kyle-django-test.wsgi
+web: python manage.py runserver 0.0.0.0:$PORT
