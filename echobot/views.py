@@ -9,7 +9,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 from linebot import LineBotApi, WebhookParser
 from linebot.exceptions import InvalidSignatureError, LineBotApiError
-from linebot.models import MessageEvent, TextMessage, TextSendMessage
+from linebot.models import MessageEvent, TextMessage, TextSendMessage, ImageSendMessage, VideoSendMessage, AudioSendMessage, LocationSendMessage, StickerSendMessage, ImagemapSendMessage, TemplateSendMessage
 
 import json
 
@@ -83,30 +83,6 @@ def callback(request):
                             ]
                         )
                     elif event.message.text=='ButtonsTemplate' :
-                        reply= TemplateSendMessage(
-                            alt_text='Buttons template',
-                            template=ButtonsTemplate(
-                                thumbnail_image_url='https://example.com/image.jpg',
-                                title='Menu',
-                                text='Please select',
-                                actions=[
-                                    PostbackTemplateAction(
-                                        label='postback',
-                                        text='postback text',
-                                        data='action=buy&itemid=1'
-                                    ),
-                                    MessageTemplateAction(
-                                        label='message',
-                                        text='message text'
-                                    ),
-                                    URITemplateAction(
-                                        label='uri',
-                                        uri='http://example.com/'
-                                    )
-                                ]
-                            )
-                        )
-                    elif event.message.text=='ConfirmTemplate' :
                         reply= TemplateSendMessage(
                             alt_text='Buttons template',
                             template=ButtonsTemplate(
